@@ -13085,7 +13085,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -13110,7 +13110,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># import library</span>
@@ -13136,7 +13136,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[27]:</div>
+    <div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -13155,7 +13155,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># open the file of interest, and use pickle loading</span>
@@ -13178,7 +13178,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[28]:</div>
+    <div class="prompt output_prompt">Out[4]:</div>
 
 
 
@@ -13197,7 +13197,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">higgsData</span><span class="o">.</span><span class="n">shape</span>
@@ -13213,7 +13213,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[29]:</div>
+    <div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -13232,7 +13232,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>1.</p>
-<p>So from the documentation we see that we would expect 50 higgs events and a 2000 background events for a run of this length. As a reference lets calculate the significance of seeing 2050 events in a run (the higgs events plus the background event) without a cut.</p>
+<p>So from the documentation we see that we would expect 50 higgs events and 2000 background events for a run of this length. As a reference lets calculate the significance of seeing 2050 events in a run (the higgs events plus the background event) without a cut.</p>
 <p>We have a Poisson distributed background since we are looking at counts of independent events, we have a mean of 2000 of the background</p>
 
 </div>
@@ -13240,7 +13240,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#sig calc</span>
@@ -13281,7 +13281,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{0:1.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">50</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2000</span><span class="p">)))</span>
@@ -13314,16 +13314,16 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>2.
-Now to do some cuts 
-We want to do cuts that will cut the qcd background but keep as much of the higgs signal as possible since the signals is week to begin with, we also want to keep track of how much of the signal we are keeping since cutting to much signal is an issue especially when doing multiple cuts.</p>
-<p>To help chose were to do the mass cut we will graph out the histogram of both the background and higgs data, (all the histograms that will be plotted are of non-normalized data this makes the plots better for finding places to cut since we are over representing the higgs data in the cut, the data will be normalized when finding the significance of the cut though as well as when displaying the number of higgs events left after cuts)</p>
+Now to do some cuts. 
+We want to do cuts that will cut the qcd background while keeping as much of the higgs signal as possible since the signals is weak to begin with, we also want to keep track of how much of the signal we are keeping since cutting too much signal is an issue especially when doing multiple cuts.</p>
+<p>To help choose where to do the mass cut we will graph out the histogram of both the background and higgs data, (all the histograms that will be plotted are of non-normalized data this makes the plots better for finding places to cut since we are over representing the higgs data in the cut, the data will be normalized when finding the significance of the cut though as well as when displaying the number of higgs events left after cuts)</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">qcdData</span><span class="p">[</span><span class="s1">&#39;mass&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span> <span class="kc">False</span><span class="p">,</span><span class="n">label</span> <span class="o">=</span><span class="s1">&#39;qcd mass&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.75</span><span class="p">)</span>
@@ -13349,13 +13349,13 @@ We want to do cuts that will cut the qcd background but keep as much of the higg
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[32]:</div>
+    <div class="prompt output_prompt">Out[8]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.legend.Legend at 0x7f7b4da8f550&gt;</pre>
+<pre>&lt;matplotlib.legend.Legend at 0x7f3237652c90&gt;</pre>
 </div>
 
 </div>
@@ -13382,7 +13382,7 @@ We want to do cuts that will cut the qcd background but keep as much of the higg
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now lets try systimitic cuts of this datat around 120 and 140 Gev</p>
+<p>Now lets try systematic cuts of this data around 120 and 140 Gev</p>
 
 </div>
 </div>
@@ -13480,7 +13480,7 @@ We want to do cuts that will cut the qcd background but keep as much of the higg
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">cut</span><span class="p">(</span><span class="n">low</span><span class="p">,</span><span class="n">high</span><span class="p">,</span><span class="n">feature</span><span class="p">,</span><span class="n">signal</span><span class="p">,</span><span class="n">bkgd</span><span class="p">):</span>
@@ -13496,8 +13496,8 @@ We want to do cuts that will cut the qcd background but keep as much of the higg
     
     <span class="n">p</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">scipy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">poisson</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">bkgdMean</span><span class="o">+</span><span class="n">signalMean</span><span class="p">,</span> <span class="n">bkgdMean</span><span class="p">))</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We get a simga significance of </span><span class="si">{0:1.3f}</span><span class="s1"> for a cut from </span><span class="si">{1:1.1f}</span><span class="s1"> to </span><span class="si">{2:1.1f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">p</span><span class="p">),</span><span class="n">low</span><span class="p">,</span><span class="n">high</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;number of higgs signla left </span><span class="si">{0:1.1f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">signalMean</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;number of background signla left </span><span class="si">{0:1.1f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">bkgdMean</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;number of higgs signal left </span><span class="si">{0:1.1f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">signalMean</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;number of background signal left </span><span class="si">{0:1.1f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">bkgdMean</span><span class="p">))</span>
     <span class="c1">#print(signalMean)</span>
     
     <span class="k">return</span><span class="p">(</span><span class="n">signalDatacut</span><span class="p">,</span><span class="n">bkgdDataCut</span><span class="p">)</span>
@@ -13510,7 +13510,7 @@ We want to do cuts that will cut the qcd background but keep as much of the higg
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sig</span><span class="p">,</span><span class="n">bac</span><span class="o">=</span><span class="n">cut</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2000</span><span class="p">,</span><span class="s1">&#39;mass&#39;</span><span class="p">,</span><span class="n">higgsData</span><span class="p">,</span><span class="n">qcdData</span><span class="p">)</span>
@@ -13559,82 +13559,82 @@ We want to do cuts that will cut the qcd background but keep as much of the higg
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>We get a simga significance of 1.128 for a cut from 0.0 to 2000.0
-number of higgs signla left 50.0
-number of background signla left 2000.0
+number of higgs signal left 50.0
+number of background signal left 2000.0
 We get a simga significance of 2.907 for a cut from 120.0 to 140.0
-number of higgs signla left 47.6
-number of background signla left 250.3
+number of higgs signal left 47.6
+number of background signal left 250.3
 We get a simga significance of 3.207 for a cut from 124.5 to 140.0
-number of higgs signla left 46.2
-number of background signla left 191.6
+number of higgs signal left 46.2
+number of background signal left 191.6
 We get a simga significance of 3.440 for a cut from 124.5 to 138.0
-number of higgs signla left 45.9
-number of background signla left 168.1
+number of higgs signal left 45.9
+number of background signal left 168.1
 
 We get a simga significance of 3.239 for a cut from 120.0 to 130.0
-number of higgs signla left 37.9
-number of background signla left 128.3
+number of higgs signal left 37.9
+number of background signal left 128.3
 
 We get a simga significance of 3.971 for a cut from 125.0 to 130.0
-number of higgs signla left 33.8
-number of background signla left 63.5
+number of higgs signal left 33.8
+number of background signal left 63.5
 We get a simga significance of 4.021 for a cut from 125.0 to 129.0
-number of higgs signla left 30.8
-number of background signla left 50.5
+number of higgs signal left 30.8
+number of background signal left 50.5
 We get a simga significance of 3.991 for a cut from 125.0 to 128.0
-number of higgs signla left 26.4
-number of background signla left 37.7
+number of higgs signal left 26.4
+number of background signal left 37.7
 We get a simga significance of 3.638 for a cut from 125.0 to 127.0
-number of higgs signla left 20.1
-number of background signla left 24.6
+number of higgs signal left 20.1
+number of background signal left 24.6
 
 We get a simga significance of 3.179 for a cut from 124.0 to 140.0
-number of higgs signla left 46.6
-number of background signla left 198.3
+number of higgs signal left 46.6
+number of background signal left 198.3
 We get a simga significance of 3.994 for a cut from 124.0 to 130.0
-number of higgs signla left 36.9
-number of background signla left 76.2
+number of higgs signal left 36.9
+number of background signal left 76.2
 We get a simga significance of 3.994 for a cut from 124.0 to 130.0
-number of higgs signla left 36.9
-number of background signla left 76.2
+number of higgs signal left 36.9
+number of background signal left 76.2
 We get a simga significance of 4.004 for a cut from 124.0 to 129.0
-number of higgs signla left 33.9
-number of background signla left 63.3
+number of higgs signal left 33.9
+number of background signal left 63.3
 We get a simga significance of 3.799 for a cut from 124.0 to 128.0
-number of higgs signla left 29.6
-number of background signla left 50.4
+number of higgs signal left 29.6
+number of background signal left 50.4
 We get a simga significance of 3.507 for a cut from 124.0 to 127.0
-number of higgs signla left 23.2
-number of background signla left 37.3
+number of higgs signal left 23.2
+number of background signal left 37.3
 We get a simga significance of 2.573 for a cut from 124.0 to 126.0
-number of higgs signla left 14.1
-number of background signla left 25.6
+number of higgs signal left 14.1
+number of background signal left 25.6
 
 We get a simga significance of 4.162 for a cut from 124.5 to 129.0
-number of higgs signla left 33.6
-number of background signla left 56.6
+number of higgs signal left 33.6
+number of background signal left 56.6
 
 We get a simga significance of 3.122 for a cut from 123.0 to 140.0
-number of higgs signla left 47.0
-number of background signla left 211.7
+number of higgs signal left 47.0
+number of background signal left 211.7
 We get a simga significance of 3.680 for a cut from 123.0 to 130.0
-number of higgs signla left 37.3
-number of background signla left 89.6
+number of higgs signal left 37.3
+number of background signal left 89.6
 We get a simga significance of 3.680 for a cut from 123.0 to 130.0
-number of higgs signla left 37.3
-number of background signla left 89.6
+number of higgs signal left 37.3
+number of background signal left 89.6
 We get a simga significance of 3.742 for a cut from 123.0 to 129.0
-number of higgs signla left 34.4
-number of background signla left 76.7
+number of higgs signal left 34.4
+number of background signal left 76.7
 We get a simga significance of 3.494 for a cut from 123.0 to 128.0
-number of higgs signla left 30.0
-number of background signla left 63.8
+number of higgs signal left 30.0
+number of background signal left 63.8
 We get a simga significance of 3.144 for a cut from 123.0 to 127.0
-number of higgs signla left 23.7
-number of background signla left 50.7
+number of higgs signal left 23.7
+number of background signal left 50.7
 We get a simga significance of 2.222 for a cut from 123.0 to 126.0
-number of higgs signla left 14.5
-number of background signla left 39.0
+number of higgs signal left 14.5
+number of background signal left 39.0
 </pre>
 </div>
 </div>
@@ -13653,7 +13653,7 @@ number of background signla left 39.0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">higgsDataCut</span><span class="p">,</span> <span class="n">qcdDataCut</span><span class="o">=</span><span class="n">cut</span><span class="p">(</span><span class="mf">124.8</span><span class="p">,</span><span class="mi">129</span><span class="p">,</span><span class="s1">&#39;mass&#39;</span><span class="p">,</span><span class="n">higgsData</span><span class="p">,</span><span class="n">qcdData</span><span class="p">)</span>
@@ -13675,8 +13675,8 @@ number of background signla left 39.0
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>We get a simga significance of 4.227 for a cut from 124.8 to 129.0
-number of higgs signla left 33.2
-number of background signla left 53.0
+number of higgs signal left 33.2
+number of background signal left 53.0
 </pre>
 </div>
 </div>
@@ -13689,14 +13689,14 @@ number of background signla left 53.0
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>3.</p>
-<p>Now we can look for other places to do cuts, we want to look for features that are similar to the effectiveness of a mass cut first and then for features that we can use to further cut the data after making a mass cut. we will start with the first of the two by overlaying background and signal histograms and seeing which one overlap the least.</p>
+<p>Now we can look for other places to do cuts, we want to look for features that are similar to the effectiveness of a mass cut first and then for features that we can use to further cut the data after making a mass cut. we will start with the first of the two by overlaying background and signal histograms and seeing which one overlaps the least.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;figure.figsize&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">55</span><span class="p">)</span>
@@ -13890,13 +13890,13 @@ number of background signla left 53.0
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[36]:</div>
+    <div class="prompt output_prompt">Out[12]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.legend.Legend at 0x7f7b4d415150&gt;</pre>
+<pre>&lt;matplotlib.legend.Legend at 0x7f3222a86ad0&gt;</pre>
 </div>
 
 </div>
@@ -13931,7 +13931,7 @@ number of background signla left 53.0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;figure.figsize&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">55</span><span class="p">)</span>
@@ -14125,13 +14125,13 @@ number of background signla left 53.0
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[37]:</div>
+    <div class="prompt output_prompt">Out[13]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.legend.Legend at 0x7f7b505ac9d0&gt;</pre>
+<pre>&lt;matplotlib.legend.Legend at 0x7f3210cccbd0&gt;</pre>
 </div>
 
 </div>
@@ -14167,7 +14167,7 @@ Let’s try a Two prong jet discriminant cut first let’s try a range of Two pr
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">higgsCut2</span><span class="p">,</span><span class="n">bkgdCut2</span><span class="o">=</span><span class="n">cut</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;d2&#39;</span><span class="p">,</span><span class="n">higgsDataCut</span><span class="p">,</span><span class="n">qcdDataCut</span><span class="p">)</span>
@@ -14193,21 +14193,21 @@ Let’s try a Two prong jet discriminant cut first let’s try a range of Two pr
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>We get a simga significance of 7.074 for a cut from 0.0 to 5.0
-number of higgs signla left 32.1
-number of background signla left 12.4
+number of higgs signal left 32.1
+number of background signal left 12.4
 We get a simga significance of 8.077 for a cut from 0.0 to 4.0
-number of higgs signla left 31.3
-number of background signla left 7.9
+number of higgs signal left 31.3
+number of background signal left 7.9
 We get a simga significance of inf for a cut from 0.0 to 2.5
-number of higgs signla left 28.5
-number of background signla left 2.0
+number of higgs signal left 28.5
+number of background signal left 2.0
 
 We get a simga significance of 4.592 for a cut from 1.0 to 5.0
-number of higgs signla left 19.4
-number of background signla left 12.3
+number of higgs signal left 19.4
+number of background signal left 12.3
 We get a simga significance of 5.284 for a cut from 1.0 to 4.0
-number of higgs signla left 18.6
-number of background signla left 7.8
+number of higgs signal left 18.6
+number of background signal left 7.8
 </pre>
 </div>
 </div>
@@ -14219,14 +14219,14 @@ number of background signla left 7.8
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We see a great increase in the significance from this second cut, python cannot give us a value for the sigma and just displays inf so we will use the number of higgs signal to background signal left after the cut to see if we can get even better cuts while still having enough higgs signal to actually get a reading. right now, with just two cuts we have a "inf" sigma with 28.5 higg events left and just 2 background events. let's see if we can get the background mean to be under 1 for this length of a detection run using cut of the KtDeltaR.</p>
+<p>We see a great increase in the significance from this second cut, python cannot give us a value for the sigma and just displays inf so we will use the number of higgs signal to background signal left after the cut to see if we can get even better cuts while still having enough higgs signal to actually get a reading. Right now, with just two cuts we have a "inf" sigma with 28.5 higg events left and just 2 background events. Let's see if we can get the background mean to be under 1 for this length of a detection run using cut of the KtDeltaR.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[82]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;figure.figsize&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
@@ -14257,13 +14257,13 @@ number of background signla left 7.8
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[82]:</div>
+    <div class="prompt output_prompt">Out[15]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.legend.Legend at 0x7f7b4d6fa0d0&gt;</pre>
+<pre>&lt;matplotlib.legend.Legend at 0x7f3236041dd0&gt;</pre>
 </div>
 
 </div>
@@ -14289,7 +14289,7 @@ number of background signla left 7.8
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[75]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">cut</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="s1">&#39;KtDeltaR&#39;</span><span class="p">,</span><span class="n">higgsCut2</span><span class="p">,</span><span class="n">bkgdCut2</span><span class="p">)</span>
@@ -14312,18 +14312,18 @@ number of background signla left 7.8
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>We get a simga significance of inf for a cut from 0.1 to 0.7
-number of higgs signla left 28.5
-number of background signla left 2.0
+number of higgs signal left 28.5
+number of background signal left 2.0
 We get a simga significance of inf for a cut from 0.2 to 0.7
-number of higgs signla left 25.4
-number of background signla left 0.7
+number of higgs signal left 25.4
+number of background signal left 0.7
 </pre>
 </div>
 </div>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[75]:</div>
+    <div class="prompt output_prompt">Out[16]:</div>
 
 
 
@@ -14341,7 +14341,7 @@ number of background signla left 0.7
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>After doing this cut we have been able to make the background signal mean to be 0.7 this needs to be taken with a grain of salt since we are only simulating 100000 background data points, and fluctuations in the model may have non trivial changes to this mean, A simulation with a larger number of events would help give more confidence in the figure. with that min mind thought we still are getting as signal count that is three orders of magnitude bigger, and with just three careful cuts we have been able to remove 99.964 of the background while still keeping over 50% of the higgs signal.</p>
+<p>After doing this cut we have been able to make the background signal mean to be 0.7 this needs to be taken with a grain of salt since we are only simulating 100,000 background data points, and fluctuations in the model may have non trivial changes to this mean, A simulation with a larger number of events would help give more confidence in the figure. With that in mind though we still are getting a signal count that is three orders of magnitude bigger, and with just three careful cuts we have been able to remove 99.964 of the background while still keeping over 50% of the higgs signal.</p>
 <p>My lab partner and I were able to get very similar significances, one key difference was how much of the signal we each cut, I was able to. keep 50% of my signal after cuts while my lab partner had to cut a significantly more signal, hence in the lower moment run the higgs data overlaps more with the background making the high pt data set a better data set to do runs to find higg particles</p>
 
 </div>
